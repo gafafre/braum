@@ -1,0 +1,21 @@
+language: python
+sudo: required
+
+python:
+  - 3.6.7
+
+services:
+  - docker
+  - postgresql
+
+env:
+  - DJANGO=2.1.5
+  - DOCKER_COMPOSE_VERSION=1.4.2
+
+install:
+  - pip install -r requirements.txt
+  - docker-compose -v
+  - docker -v
+
+script:
+  - docker-compose run --rm web python manage.py test --verbosity=2
