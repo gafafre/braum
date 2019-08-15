@@ -19,4 +19,3 @@ six==1.12.0
 texttable==0.9.1
 urllib3==1.24.2
 websocket-client==0.54.0
-
