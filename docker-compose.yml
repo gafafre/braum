@@ -3,10 +3,12 @@ version: '3'
 services:
   db:
     image: postgres
+    ports:
+      - "5432:5432"
   web:
     build: .
     environment:
-      - DATABASE_URL=postgres://postgres@db:5432/dockerdb
+      - DATABASE_URL=postgres://postgres@db:5432/braum_db
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
