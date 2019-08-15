@@ -9,7 +9,7 @@ services:
   - postgresql
 
 env:
-  - DJANGO=2.1.5
+  - DJANGO=2.1.11
   - DOCKER_COMPOSE_VERSION=1.4.2
 
 install:
