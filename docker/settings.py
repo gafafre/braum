@@ -126,6 +126,8 @@ STATIC_ROOT = 'static/'
 if os.getcwd() == '/app':
     # Config for staticfiles
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    print('@' * 75)
+    print(BASE_DIR)
     STATIC_ROOT = 'static'
     STATICFILES_DIRS = (
         os.path.join(BASE_DIR, 'static'),
