@@ -1,1 +1,1 @@
-web gunicorn docker:app
+web: gunicorn docker.wsgi --log-file -
