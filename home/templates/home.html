@@ -1,0 +1,22 @@
+{% load static from staticfiles %}
+<html>
+    <head>
+        <style>
+            body[data-section="braum"] img {
+                display: block;
+                margin: 50px auto 0px auto;
+                width: 50%;
+            }
+
+            body[data-section="braum"] p {
+                text-align: center;
+                font-weight: 900;
+                font-size: xx-large;
+            }
+        </style>
+    </head>
+    <body data-section="braum">
+        <img src="{% static 'braum_original_skin.jpg'%}" alt="Braum">
+        <p>"Braum está aqui."</p>
+    </body>
+</html>
