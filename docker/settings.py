@@ -130,3 +130,10 @@ if os.getcwd() == '/app':
     STATICFILES_DIRS = (
         os.path.join(BASE_DIR, 'static'),
     )
+    print('@' * 75)
+    print(BASE_DIR)
+    print('@' * 75)
+    print(STATIC_ROOT)
+    print('@' * 75)
+    print(STATICFILES_DIRS)
+    print('@' * 75)
