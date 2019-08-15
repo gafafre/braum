@@ -11,6 +11,7 @@ psycopg2 = "*"
 dj-database-url = "*"
 docker-compose = "*"
 gunicorn = "*"
+dj_static = "*"
 
 [requires]
 python_version = "3.6"
