@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'dj_static',
+    'core.apps.CoreConfig',
+    'writers.apps.WritersConfig',
+    'articles.apps.ArticlesConfig',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +125,6 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = 'static/'
+
+LOGIN_REDIRECT_URL = '/home/'
+LOGOUT_REDIRECT_URL = '/'
