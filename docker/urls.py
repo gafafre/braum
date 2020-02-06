@@ -23,8 +23,8 @@ from django.views.generic.base import RedirectView
 from django.conf import settings
 
 urlpatterns = [
-    path('home/', home),
     path('', RedirectView.as_view(url='accounts/login'), name='go-to-login'),
+    path('home/', home),
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

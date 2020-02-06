@@ -10,7 +10,7 @@ services:
   web:
     build: .
     environment:
-      - DATABASE_URL=postgres://postgres@db:5432/braum_db
+      - DATABASE_URL=postgres://postgres:docker@db:5432/braum_db
       - ALLOWED_HOSTS=localhost
       - DEBUG=1
     command: python manage.py runserver 0.0.0.0:8000
