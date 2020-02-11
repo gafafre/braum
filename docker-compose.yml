@@ -1,7 +1,6 @@
 version: '3.6'
 # User default database -> postgres
 services:
-  
   db:
     image: postgres
     environment:
@@ -13,7 +12,7 @@ services:
     build: .
     environment:
       - DATABASE_URL=postgres://postgres:docker@db:5432/braum_db
-      - ALLOWED_HOSTS=localhost
+      - ALLOWED_HOSTS=0.0.0.0
       - DEBUG=1
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
