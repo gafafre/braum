@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'core.apps.CoreConfig',
     'writers.apps.WritersConfig',
     'articles.apps.ArticlesConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

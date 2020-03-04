@@ -13,7 +13,6 @@ class Article (Base):
     def __str__(self):
         return self.title
 
-
 class Element (Base):
     article_id = models.ForeignKey(Article, on_delete=models.PROTECT)
     order = models.FloatField()
