@@ -1,9 +1,7 @@
 from django.db import models
-from django.contrib.auth.models import User
 from core.models import Base
 from writers.models import Writer
 from django.utils.text import slugify
-import datetime
 
 
 class Article (Base):
