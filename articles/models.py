@@ -14,10 +14,6 @@ class Article (Base):
     def __str__(self):
         return self.title
 
-    # def save_model(self, request, obj, form, change):
-    #     obj.added_by = request.user
-    #     self.slug = slugify(self.title)
-    #     super().save_model(request, obj, form, change)
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         super(Article, self).save(*args, **kwargs)
