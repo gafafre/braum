@@ -49,26 +49,26 @@ class TestViews(TestCase):
 
     def test_AllArticles_API_GET(self):
         response = self.client.get(self.articles_url)
-        result = (b'[{"id": 1, "slug": "test-title", "writer": "tester",'
+        result = (b'"slug": "test-title", "writer": "tester",'
                   b' "title": "test title", "subtitle": "test subtitle",'
                   b' "publish_date": "None", "Paragraph": [{"order": 1.0, "text": "text"}],'
                   b' "MediaVisual": [{"order": 1.0, "src": "src", "alt": "alt", "width": 100,'
                   b' "height": 100, "src_link": "link"}], "YouTube": [{"order": 1.0,'
-                  b' "src": "src", "autoplay": true, "loop": true, "start": null}]}]')
+                  b' "src": "src", "autoplay": true, "loop": true, "start": null}]')
         self.assertEquals(response.status_code, 200)
-        self.assertIn(response.content, result)
+        self.assertIn(result, response.content)
 
     def test_Article_API_GET(self):
         response = self.client.get(self.specific_article_url)
-        result = (b'[{"id": 2, "writer": "tester", "title": "test title",'
+        result = (b'"writer": "tester", "title": "test title",'
                   b' "subtitle": "test subtitle", "publish_date": "None",'
                   b' "Paragraph": [{"order": 1.0, "text": "text"}],'
                   b' "MediaVisual": [{"order": 1.0, "src": "src", "alt": "alt",'
                   b' "width": 100, "height": 100, "src_link": "link"}],'
                   b' "YouTube": [{"order": 1.0, "src": "src", "autoplay": true,'
-                  b' "loop": true, "start": null}]}]')
+                  b' "loop": true, "start": null}]')
         self.assertEquals(response.status_code, 200)
-        self.assertEquals(response.content, result)
+        self.assertIn(result, response.content)
 
     def test_Article_API_Paragraph_GET(self):
         response = self.client.get(self.article_paragraph_url)
