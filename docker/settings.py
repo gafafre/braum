@@ -40,6 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'dj_static',
+    'core.apps.CoreConfig',
+    'writers.apps.WritersConfig',
+    'articles.apps.ArticlesConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
